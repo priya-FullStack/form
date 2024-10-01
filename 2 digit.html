@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n=parseInt(prompt("Enter the number"))
+        var m=parseInt(prompt("Enter the digit"))
+        var sum=0
+        for(var i=0;i<=n;i++){
+            var count=m+n
+            sum=sum+count
+            document.write(`The sum digit is ${sum}`)
+        }
+        var performAgain = confirm("Do you want to perform the operation again?");
+        while (performAgain) {
+        for (var i = 0; i <= n; i++) {
+            var count = m + n;
+            sum += count;
+            document.write(`The sum digit is ${sum}<br>`);
+        }
+        performAgain = confirm("Do you want to perform the operation again?");
+         }
+        
+    </script>
+</body>
+</html>

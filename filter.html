@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var marks=[50,40,45,37,20];
+        function check(value){
+            return value>30;
+        }
+        document.write(marks.filter(check));
+        document.write("<br>");
+        ////////////////////////////////////
+        function test(element,index,array){
+            return element>=25;
+        }
+        document.write([21,32,65,42]).filter(test)
+    </script>
+</body>
+</html>

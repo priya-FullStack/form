@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+        <table>
+            <tr>
+                <td> <button onclick="clearDisplay()" class="operator-btn">AC</button></td>
+                <td><button onclick="appendToDisplay('()')" class="operator-btn">()</button></td>
+                <td><button onclick="appendToDisplay('%')" class="operator-btn">%</button></td>
+                <td><button onclick="appendToDisplay('/')" class="operator-btn">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('7')">7</button></td>
+                <td><button onclick="appendToDisplay('8')">8</button></td>
+                <td><button onclick="appendToDisplay('9')">9</button></td>
+                <td><button onclick="appendToDisplay('*')" class="operator-btn">*</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('4')">4</button></td>
+                <td><button onclick="appendToDisplay('5')">5</button></td>
+                <td><button onclick="appendToDisplay('6')">6</button></td>
+                <td><button onclick="appendToDisplay('-')" class="operator-btn">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('1')">1</button></td>
+                <td><button onclick="appendToDisplay('2')">2</button></td>
+                <td><button onclick="appendToDisplay('3')">3</button></td>
+                <td><button onclick="appendToDisplay('+')" class="operator-btn">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="appendToDisplay('0')">0</button></td>
+                <td><button onclick="appendToDisplay('.')">.</button></td>
+                <td><button onclick="appendToDisplay('+/-')" class="operator-btn">+/-</button></td>
+                <td><button onclick="calculate()" class="operator-btn">=</button></td>
+            </tr>
+    </div>
+
+        </table>
+        <script>
+            const display=document.getElementById("display");
+function appendToDisplay(input){
+    display.value +=input;
+}
+function clearDisplay(){
+    display.value="";
+}
+function calculate(){
+    try{
+        display.value=eval(display.value);
+    }
+    catch(error){
+        display.value="Error";
+    }
+}
+        </script>
+       
+</body>
+</html>

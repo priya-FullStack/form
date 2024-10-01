@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="setCookieNameInput">Cookie Name:</label>
+    <input type="text" id="setCookieNameInput" placeholder="Enter Cookie Name"><br><br>
+    <label for="setCookieValueInput">Cookie Value:</label>
+    <input type="text" id="setCookieValueInput" placeholder="Enter Cookie Value"><br>
+    <button onclick="setCookie()">Set Cookie</button><br><br>
+    <input type="text" id="getCookieNameInput" placeholder="Enter Cookie Name"><br><br>
+    <button onclick="getCookie()">Get Cookie</button><br>
+    <hr>
+    <label for="updateCookieNameInput">Update Cookie by Name:</label>
+    <input type="text" id="updateCookieNameInput" placeholder="Enter Cookie Name"><br><br>
+    <label for="updateCookieValueInput">New Cookie Value:</label>
+    <input type="text" id="updateCookieValueInput" placeholder="Enter New Cookie Value"><br>
+    <button onclick="updateCookie()">Update Cookie</button><br>
+    <hr>
+    <label for="deleteCookieNameInput">Delete Cookie by Name:</label>
+    <input type="text" id="deleteCookieNameInput" placeholder="Enter Cookie Name"><br>
+    <button onclick="deleteCookie()">Delete Cookie</button><br>
+    <script>
+    function setCookie() {
+    const cookieName = document.getElementById("setCookieNameInput").value;
+    const cookieValue = document.getElementById("setCookieValueInput").value;
+    if (!cookieName || !cookieValue) {
+alert("Please enter both a name and a value for the cookie.");
+return;
+}
+        document.cookie = `${cookieName}=${cookieValue}; expires=Sat, 30 Dec 2023 17:39:00 UTC; path=/`;
+        alert("Cookie set!");
+        }
+    function getCookie() {
+    const cookieName = document.getElementById("getCookieNameInput").value;
+    if (!cookieName) {
+        alert("Please enter a name to retrieve the cookie.");
+        return;
+        }
+const cookies = document.cookie.split(';');
+let found = false;
+for (let i = 0; i < cookies.length; i++) {
+const cookie = cookies[i].trim();
+if (cookie.startsWith(`${cookieName}=`)) {
+const value = cookie.substring(`${cookieName}=`.length);
+alert("Cookie Value: " + value);
+found = true;
+break;
+}
+}
+if (!found) {
+alert("Cookie with the specified name does not exist.");
+}
+}
+function updateCookie() {
+const cookieName = document.getElementById("updateCookieNameInput").value;
+const newCookieValue =
+document.getElementById("updateCookieValueInput").value;
+if (!cookieName || !newCookieValue) {
+alert("Please enter both a name and a new value for the cookie.");
+return;
+}
+// Check if the cookie exists before updating
+if (document.cookie.includes(`${cookieName}=`)) {
+document.cookie = `${cookieName}=${newCookieValue}; expires=Sat, 30 Dec
+2023 17:39:00 UTC; path=/`;
+alert("Cookie updated!");
+} else {
+alert("Cookie with the specified name does not exist.");
+}
+}
+function deleteCookie() {
+const cookieName = document.getElementById("deleteCookieNameInput").value;
+if (!cookieName) {
+alert("Please enter a name to delete the cookie.");
+return;
+}
+// Check if the cookie exists before deleting
+if (document.cookie.includes(`${cookieName}=`)) {
+document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC;
+path=/;`;
+alert("Cookie deleted!");
+} else {
+alert("Cookie with the specified name does not exist.");
+}
+}
+</script>
+<hr>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var age=parseInt(prompt("Enter the age:"))
+        var person=prompt("Enter the type:")
+        if(age>=18){
+            if(person===`indiaresident` || person===`NRI`){
+                document.write("person is eligible to vote")
+            }
+        else if(age>=25 && person===`indianresident`){
+            document.write("person is eligible to contest")
+        }
+        }
+    </script>
+</body>
+</html>

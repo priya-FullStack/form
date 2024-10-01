@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // function func(n) {
+
+        //     if (n <= 1) {
+        //         return 1;
+        //     } else {
+        //         document.write (func(n - 1) + func(n - 2));
+        //     }
+        // }
+    
+        // var a = parseInt(prompt("Enter the number"));
+        // document.write(func(a));
+
+        function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+// Generating Fibonacci series up to the 10th term
+for (let i = 0; i <=3 ; i++) {
+  console.log(fibonacci(i));
+}
+    </script>
+    
+</body>
+</html>

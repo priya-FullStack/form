@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #dc72a7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="dob"] {
+    width: calc(100% - 2px); /* Adjust for border */
+}
+
+input[type="tele"],
+input[type="password"],
+input[type="url"],
+input[type="email"] {
+    margin-top: 12px;
+}
+
+input[type="image"]:hover,
+input[type="file"]:hover {
+    cursor: pointer;
+}
+/*
+* {
+    margin: 5px;
+    background-color: hsl(0, 50%, 92%);
+    color: #333;
+    font: 100% / normal sans-serif;
+    padding:10px;
+  }
+input[type=email], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #251818;
+    border-radius: 4px;
+    resize: vertical;
+  }
+input[type=tel], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #090707;
+    border-radius: 4px;
+    resize: vertical;
+  }
+input[type=url], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #251818;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  input[type=password], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #251818;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  input[type=date], select, textarea {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #251818;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  #validation {
+    align-items: center;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  #email {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #mobile-number {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #phone-number {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #url {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #password {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #cpassword {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }
+  #dob {
+    float: left;
+    width: 65%;
+    margin-top: 6px;
+  }

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">   
+      <img id="myimg" src="https://static.vecteezy.com/system/resources/previews/000/431/904/original/children-jumping-on-trampoline-vector.jpg" width="300px" height="350px" />   
+      <p>Click the below buttons to move the image</p>   
+      <input type="button" value="Move Right" id="moveRightBtn" />
+      <input type="button" value="Move Left" id="moveLeftBtn" />
+      <input type="button" value="Move Up" id="moveUpBtn" />
+      <input type="button" value="Move Down" id="moveDownBtn" />
+   </div>
+
+   <script type="text/javascript">
+        var img = null;
+
+        function init() {
+            img = document.getElementById('myimg');
+            img.style.position = 'relative';
+            img.style.left = '20px';
+            img.style.top = '20px';
+
+            document.getElementById('moveRightBtn').addEventListener('click', moveRight);
+            document.getElementById('moveLeftBtn').addEventListener('click', moveLeft);
+            document.getElementById('moveUpBtn').addEventListener('click', moveUp);
+            document.getElementById('moveDownBtn').addEventListener('click', moveDown);
+        }
+        function moveRight() {
+            img.style.left = parseInt(img.style.left) + 50 + 'px';
+        }
+        function moveLeft() {
+            img.style.left = parseInt(img.style.left) - 50 + 'px';
+        }
+        function moveUp() {
+            img.style.top = parseInt(img.style.top) - 50 + 'px';
+        }
+        function moveDown() {
+            img.style.top = parseInt(img.style.top) + 50 + 'px';
+        }
+        window.onload = init;
+   </script>
+</body>
+</html>

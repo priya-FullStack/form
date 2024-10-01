@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function intro(greeting){
+            console.log(`Hello,${this.name}`)
+        }
+        const person1={name:'alice'}
+        const person2={name:'bob'}
+        const introduction=intro.bind(person1)
+        const introduction1=intro.bind(person2)
+        introduction()
+        introduction1()
+    </script>
+</body>
+</html>

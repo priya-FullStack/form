@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function basic(name){
+            console.log(`Hello,${name}! My favourite color is ${this.favouriteColor}`)
+        }
+        const color={
+            favouriteColor:"blue"
+        }
+        const basic1=basic.bind(color);
+        basic1('loki');
+    </script>
+</body>
+</html>

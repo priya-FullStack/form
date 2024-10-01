@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function findMinMax(arr) {
+            let max = arr[0];
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+                if (arr[i] < min) {
+                    min = arr[i];
+                }
+            }
+            document.write(`Maximum value: ${max}<br>`);
+            document.write(`Minimum value: ${min}`);
+        }
+        let numbers = [5, 9, 1, 3, 6, 2];
+        findMinMax(numbers);
+    </script> -->
+    <script>
+        let numbers = [5, 9, 1, 3, 6, 2];
+let x = Math.min(...numbers);
+let y = Math.max(...numbers);
+
+document.write("Minimum value: " + x);
+document.write("<br>"); // Adding a line break for clarity
+document.write("Maximum value: " + y);
+
+    </script>
+    
+</body>
+</html>

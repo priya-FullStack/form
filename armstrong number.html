@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num=parseInt(prompt("Enter the number"))
+        var temp=num
+        var sum=0
+        while(temp>0){
+            var d=temp%10
+            sum=sum+(d**3)
+            temp=Math.floor(temp/10);
+        }
+        if(sum==num){
+            document.write("It is an armstrong number")
+        }
+        else{
+            document.write("It is not an armstrong number")
+        }
+    </script>
+</body>
+</html>
